@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            width: 30%;
+            height: 100px;
+            z-index: 1;
+            font-family: inherit;
+            font-size: 40px;
+            color: white;
+            padding: 0.5em 1em;
+            outline: none;
+            border: none;
+            background-color: rgb(4, 133, 138);
+        }
+
+        button:hover {
+            cursor: pointer;
+            animation: jelly 0.5s;
+        }
+
+        @keyframes jelly {
+            0%,
+            100% {
+                transform: scale(1, 1);
+            }
+            25% {
+                transform: scale(0.9, 1.1);
+            }
+            50% {
+                transform: scale(1.1, 0.9);
+            }
+            75% {
+                transform: scale(0.95, 1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+<button>果冻按钮</button>
+</body>
+</html>
