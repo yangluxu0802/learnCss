@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .btn {
+            background-color: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid cadetblue;
+            color: cadetblue;
+            padding: 10px 20px;
+            font-weight: bold;
+            position: relative;
+            transition: all 1s;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+        }
+
+        .btn::before{
+            content: '';
+            display: block;
+            height: 100%;
+            width: 0;
+            background-color: cadetblue;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            transform: skewX(45deg);
+            transition: all 1s;
+            z-index: -1;
+        }
+
+        .btn:hover::before{
+            width: 150%;
+        }
+
+        .btn:hover{
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<button class="btn">按钮CSS</button>
+</body>
+</html>
