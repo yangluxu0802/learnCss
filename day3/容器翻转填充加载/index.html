@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>容器翻转填充加载</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        div {
+            position: relative;
+            width: 2em;
+            height: 2em;
+            border: 3px solid #3cefff;
+            overflow: hidden;
+            animation: spin 3s ease infinite;
+        }
+
+        div::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 2em;
+            height: 2em;
+            background-color: hsla(185, 100%, 62%, 0.75);
+            transform-origin: center bottom;
+            animation: fill 3s linear infinite;
+        }
+
+        @keyframes spin {
+            50%,
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fill {
+            25%,
+            50% {
+                transform: scaleY(0);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
